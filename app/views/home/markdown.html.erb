@@ -1,0 +1,5 @@
+<div id="editor">
+	<textarea v-bind:value="input" v-on:input="update"></textarea>
+	<div v-html="compiledMarkDown"></div>
+</div>
+<%= javascript_pack_tag 'markdown' %>

@@ -4,4 +4,7 @@ class HomeController < ApplicationController
 
   def app
   end
+
+  def markdown
+  end
 end
