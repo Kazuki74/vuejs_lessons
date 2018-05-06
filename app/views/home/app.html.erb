@@ -1,0 +1,22 @@
+<div id="app" class="container">
+	<h2>Todo</h2>
+	<span>全{{todos.length}}件中{{remaining}}件</span>
+	<button v-on:click="archive" class="btn btn-danger btn-sm">断捨離</button>
+	<ul class="list-unstyled">
+		<li v-for="todo in todos">
+			<label>
+				<input type="checkbox" v-model="todo.done">
+				<span v-bind:class="{'done': todo.done}">{{todo.text}}</span>
+				<button v-on:click="removeTodo(todo)" class="btn btn-warning btn-sm">
+					削除
+				</button>
+			</label>
+		</li>
+	</ul>
+	<p>
+		<input type="text" v-model="todoText" placeholder="add new todo!">
+		<button v-on:click="addTodo()" class="btn btn-primary btn-sm">追加</button>
+	</p>
+</div>
+
+<%= javascript_pack_tag 'app' %>
